@@ -1,2 +1,29 @@
 npm install node-sass 
 npm add node-sass   
+
+
+GITHUB:
+greš na github, new repository in daš ime on dobiš shs al neke takiga link ga kopiraš
+greš v cmd v mapo in dat git remote add origin "link"
+git add -A 
+git commit -m "massage"
+git push origin master 
+in je gor :D 
+
+DODAJ SLIKO V NEK BOX
+<div style={{ backgroundImage: `url(${url})` }} className="menu-item">
+pol pa še v css:
+.menu-item{
+    
+background-position: center;
+  background-size: cover;
+}
+
+NAREDI CONTENT DA SE VIDI SPODI SLIKA IN DA JE CONTENT BELO:
+.content {
+  background-color: white;
+  opacity: 0.7;
+}
+
+FONTS daš v index.html pod linke:
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
