@@ -27,3 +27,40 @@ NAREDI CONTENT DA SE VIDI SPODI SLIKA IN DA JE CONTENT BELO:
 
 FONTS daš v index.html pod linke:
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+ROUTER
+npm install react-router-dom
+-v index.js import {BrowserRouter} from "react-router-dom" in naredi: ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
+-v App.js importi in naredi: 
+import { Route, Link,Switch } from "react-router-dom";
+return (
+    <div>
+      <Switch>  //switch naredi tkoj k najde path tam konca in ne routa vec naprej haha 
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/home" component={Home} />
+      </Switch>
+    </div>
+  );
+  ps: ...pa k Home definiras mores dat :
+const Home = () => {
+  return <div>asd</div>;
+};
+=====>>>>>> ZATO UPORABI 
+import {withRouter} from "react-router-dom"
+in pol samo spodi v tej datoteki: daš: export default withRouter("Imekarvračaš"); in to vrne isto ampak z history pa props od routerja da jih lohka dosotpa mo 
+
+NAJBOLŠ JE: PAČ v index vrapaš app.js v browserrouter pol pa v app.js nardiš route in pol da pošleš history v children samo v praven otroku dodaš 
+import {withRouter} from "react-router-dom" in ga spodi exportaš zram in zgori v propse dodaš history :D 
+
+
+VSTAVI VSE PROPSE IN PODAJ naprej
+{this.state.section.map(({ id, ...ostali }) => {
+          return <MenuItem key={id} {...ostali} />;
+        })}
+k spremenimo link: onClick={() => history.push(`${match.url}${linkUrl}`)} in match dodamo v props, v  ttem notri fajlu smo meli withRouter ;D 
+
