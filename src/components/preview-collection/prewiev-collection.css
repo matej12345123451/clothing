@@ -1,0 +1,18 @@
+.preview {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(22vw, 1fr));
+  grid-column-gap: 20px;
+  padding: 20px;
+  height: 30vh;
+}
+h1 {
+  margin: 30px;
+  font-family: "Luckiest Guy", cursive;
+  background: -webkit-linear-gradient(red, #000080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+}
